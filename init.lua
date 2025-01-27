@@ -189,6 +189,14 @@ vim.keymap.set('n', '<C-l>', '<C-w><C-l>', { desc = 'Move focus to the right win
 vim.keymap.set('n', '<C-j>', '<C-w><C-j>', { desc = 'Move focus to the lower window' })
 vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
 
+-- begin custom keymaps
+vim.keymap.set('v', '<Tab>', '>gv', { noremap = true, silent = true, desc = 'Indent selected lines' })
+vim.keymap.set('v', '<S-Tab>', '<gv', { noremap = true, silent = true, desc = 'Unindent selected lines' })
+vim.keymap.set('n', '<leader>sa', 'ggVG', { noremap = true, silent = true, desc = '[S]elect [A]ll Text' })
+vim.keymap.set('v', '<C-H>', '"_X', { noremap = true, silent = true, desc = 'Delete character before cursor (visual mode, black [h]ole)' })
+vim.keymap.set('i', '<C-H>', '<C-O>"_x', { noremap = true, silent = true, desc = 'Delete character before cursor (insert mode, black [h]ole)' })
+-- end custom keymaps
+
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`
 
